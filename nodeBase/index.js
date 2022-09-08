@@ -3,9 +3,10 @@ import mongoose from  'mongoose' // for work with DB
 import bodyParser from 'body-parser';
 import router from './router.js';
 import fileUpload from 'express-fileupload';
+import { DB_URL_AUTH } from './config.js';
 
 const PORT = 8000; // порт на якому піде запуск
-const DB_URL = `mongodb+srv://oleh:oleh@atlascluster.4yetzq5.mongodb.net/?retryWrites=true&w=majority`
+const DB_URL = DB_URL_AUTH
 
 const app = express(); // виклик ф-ції
 // express не може читати json то для перетворення в json 
